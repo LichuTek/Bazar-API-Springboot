@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteService implements IClienteService {
@@ -21,6 +22,20 @@ public class ClienteService implements IClienteService {
     @Override
     public void postCliente(Cliente client) {
         clienteRepo.save(client);
+    }
+
+    @Override
+    public void editCliente(Long id, Cliente cliente) {
+        Optional<Cliente> clienteOp = clienteRepo.findById(id);
+        if (clienteOp.isPresent()){
+            Cliente cli = clienteOp.get();
+            cli.setId_cliente(id);
+            cli.setApellido(cliente.getApellido());
+            cli.setDni(cliente.getDni());
+            cli.setListaVentas(cliente.getListaVentas());
+            cli.setNombre(cliente.getNombre());
+            clienteRepo.save(cli);
+        }
     }
 
     @Override

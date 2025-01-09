@@ -11,7 +11,7 @@ public interface IVentaService {
     //POST
     public void postVenta (Venta venta);
     //EDIT
-
+    public void editVenta(Long id, Venta venta);
     //TRAER ESPECIFICO
     public Venta getVenta(Long id);
 

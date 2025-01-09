@@ -1,6 +1,7 @@
 package com.lichu.bazar.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +20,7 @@ public class Producto {
     private Double costo;
     private Double cantidad_disponible;
     @ManyToMany (mappedBy = "listaProductos")
+    @JsonIgnoreProperties("listaProductos") // Ignorar la lista de productos en Venta
     private List<Venta> listaVentas;
 
 

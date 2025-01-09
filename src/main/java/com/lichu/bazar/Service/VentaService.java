@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class VentaService implements IVentaService {
@@ -20,6 +21,20 @@ public class VentaService implements IVentaService {
     @Override
     public void postVenta(Venta venta) {
         ventaRepo.save(venta);
+    }
+
+    @Override
+    public void editVenta(Long id, Venta venta) {
+        Optional<Venta> ventaOptional = ventaRepo.findById(id);
+        if (ventaOptional.isPresent()){
+            Venta vent = ventaOptional.get();
+            vent.setCodigo_venta(id);
+            vent.setFecha_venta(venta.getFecha_venta());
+            vent.setTotal(venta.getTotal());
+            vent.setUnCliente(venta.getUnCliente());
+            vent.setListaProductos(venta.getListaProductos());
+            ventaRepo.save(vent);
+        }
     }
 
     @Override

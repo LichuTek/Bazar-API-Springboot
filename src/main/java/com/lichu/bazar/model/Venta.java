@@ -22,10 +22,12 @@ public class Venta {
             joinColumns = @JoinColumn (name = "FK_VENTA"),
             inverseJoinColumns = @JoinColumn(name = "FK_PRODUCTO")
     )
+    @JsonIgnoreProperties("listaVentas") // Ignorar ventas en los productos
     private List<Producto> listaProductos;
     @ManyToOne
     @JoinColumn(name = "id_cliente")
     @JsonIgnoreProperties("listaVentas")
+
     private Cliente unCliente;
 
     public Venta() {

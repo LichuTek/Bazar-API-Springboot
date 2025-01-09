@@ -10,7 +10,7 @@ public interface IClienteService {
     //POST
     public void postCliente (Cliente client);
     //EDIT
-
+    public void editCliente (Long id, Cliente cliente);
     //TRAER ESPECIFICO
     public Cliente getCliente(Long id);
 
