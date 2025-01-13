@@ -95,7 +95,7 @@ Durante el desarrollo de este proyecto, se reforzaron y adquirieron los siguient
 
 ---
 ### 🛠 Colección de Postman
-La colección utilizada para probar los endpoints está disponible para descarga [aquí](https://link-a-la-coleccion.com).  
+La colección utilizada para probar los endpoints está disponible en la carpeta del proyecto en la carpeta postman.  
 Una vez descargada, puedes importarla en Postman siguiendo estos pasos:
 1. Abre Postman.
 2. Haz clic en **Import**.
