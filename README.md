@@ -81,6 +81,17 @@ La aplicación está basada en las siguientes entidades:
   - `total`
   - Cantidad de productos
   - Nombre y apellido del cliente
+---
+### 🌱 Conocimientos Adquiridos y Mejorados
+
+Durante el desarrollo de este proyecto, se reforzaron y adquirieron los siguientes conocimientos clave:
+
+- **Desarrollo de CRUDs:** Mejora en la comprensión general de cómo implementar un CRUD completo, especialmente clarificando dudas sobre la operación **PUT**.
+- **Manejo de Listas y Arrays:** Reforzamiento en el uso y manipulación de estructuras como listas y arrays para gestionar datos de forma eficiente.
+- **Patrón DTO:** Comprensión avanzada sobre el uso de **Data Transfer Objects (DTO)** para diseñar endpoints que retornan solo la información necesaria.
+- **Estructura de Proyectos en Spring Boot:** Aprendizaje y consolidación de buenas prácticas en la organización de carpetas y archivos dentro de un proyecto **Spring Boot**.
+- **Postman:** Aprendizaje práctico para crear y gestionar **colecciones** en Postman para realizar pruebas de endpoints de manera más efectiva.
+- **Uso de `Optional`:** Introducción y uso del tipo de dato **`Optional`** para manejar datos que pueden o no estar presentes, mejorando la gestión de nullability y evitando errores comunes.
 
 ---
 
