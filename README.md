@@ -84,14 +84,6 @@ La aplicación está basada en las siguientes entidades:
 
 ---
 
-## ⭐ Bonus (Opcional)
-Se pueden agregar endpoints adicionales o implementar mejoras, como:
-- Descontar stock automáticamente al realizar una venta.
-- Validar disponibilidad de productos antes de completar una venta.
-- Otros requerimientos según las necesidades del bazar.
-
----
-
 ## 🚀 Cómo ejecutar el proyecto
 1. Clona este repositorio:  
    ```bash
