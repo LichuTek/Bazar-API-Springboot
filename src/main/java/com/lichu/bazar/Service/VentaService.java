@@ -1,5 +1,6 @@
 package com.lichu.bazar.Service;
 
+import com.lichu.bazar.DTO.VentaDTO;
 import com.lichu.bazar.Repository.IClienteRepository;
 import com.lichu.bazar.Repository.IVentaRepository;
 import com.lichu.bazar.model.Venta;
@@ -40,6 +41,26 @@ public class VentaService implements IVentaService {
     @Override
     public Venta getVenta(Long id) {
         return ventaRepo.findById(id).orElse(null);
+    }
+
+    @Override
+    public VentaDTO getVentaMayor() {
+        List<Venta> listaVentas = getVentas();
+        Double max = 0.0;
+        Venta ventaMax = null;
+        for(Venta vent : listaVentas){
+            if(vent.getTotal() > max){
+                max = vent.getTotal();
+                ventaMax = vent;
+            }
+        }
+        VentaDTO ventaInfo = new VentaDTO();
+        ventaInfo.setApellido(ventaMax.getUnCliente().getApellido());
+        ventaInfo.setMonto(ventaMax.getTotal());
+        ventaInfo.setCodigo_venta(ventaMax.getCodigo_venta());
+        ventaInfo.setNombre(ventaMax.getUnCliente().getNombre());
+
+        return ventaInfo;
     }
 
     @Override

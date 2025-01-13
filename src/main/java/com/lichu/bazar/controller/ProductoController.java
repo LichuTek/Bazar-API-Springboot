@@ -7,6 +7,7 @@ import com.lichu.bazar.model.Producto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -37,6 +38,18 @@ public class ProductoController {
     @PutMapping("/productos/editar/{codigo_producto}")
     public void editProduct(@PathVariable Long codigo_producto, @RequestBody Producto producto){
         produServ.editProduct(codigo_producto,producto);
+    }
+
+    @GetMapping("/productos/falta_stock")
+    public List<Producto> getFaltante(){
+        List<Producto> allProducts = getProducts();
+        List<Producto> faltaStock = new ArrayList<>();
+        for(Producto prod : allProducts){
+            if(prod.getCantidad_disponible() < 5){
+                faltaStock.add(prod);
+            }
+        }
+        return faltaStock;
     }
 
 
