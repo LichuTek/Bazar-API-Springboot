@@ -94,6 +94,15 @@ Durante el desarrollo de este proyecto, se reforzaron y adquirieron los siguient
 - **Uso de `Optional`:** Introducción y uso del tipo de dato **`Optional`** para manejar datos que pueden o no estar presentes, mejorando la gestión de nullability y evitando errores comunes.
 
 ---
+### 🛠 Colección de Postman
+La colección utilizada para probar los endpoints está disponible para descarga [aquí](https://link-a-la-coleccion.com).  
+Una vez descargada, puedes importarla en Postman siguiendo estos pasos:
+1. Abre Postman.
+2. Haz clic en **Import**.
+3. Selecciona el archivo `.json` descargado.
+4. ¡Listo! Ahora puedes probar los endpoints del proyecto.
+
+---
 
 ## 🚀 Cómo ejecutar el proyecto
 1. Clona este repositorio:  
